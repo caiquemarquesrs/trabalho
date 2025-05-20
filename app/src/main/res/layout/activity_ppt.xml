@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#f5f5f5"
+    tools:context=".PptActivity">
+
+
+    <TextView
+        android:id="@+id/tvInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escolha uma opção abaixo:"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/llUserChoices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvInstructions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibtnRock"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/rock"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Pedra"/>
+
+        <ImageButton
+            android:id="@+id/ibtnPaper"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/paper"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Papel"/>
+
+        <ImageButton
+            android:id="@+id/ibtnScissors"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/scissors"
+            android:background="?attr/selectableItemBackground"
+            android:contentDescription="Tesoura"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvComputerChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escolha do computador:"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toBottomOf="@+id/llUserChoices"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/ivComputerChoice"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvComputerChoice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Escolha do computador"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
