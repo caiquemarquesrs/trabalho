@@ -10,22 +10,22 @@ import java.util.Random;
 
 public class GeradorValoresActivity extends AppCompatActivity {
 
-    private EditText etMinValue;
-    private EditText etMaxValue;
-    private Button btnGenerate;
-    private TextView tvResult;
+    private EditText valorMin;
+    private EditText valorMax;
+    private Button btnGerador;
+    private TextView resultado;
     private Random random;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gerador);
-        etMinValue = findViewById(R.id.etMinValue);
-        etMaxValue = findViewById(R.id.etMaxValue);
-        btnGenerate = findViewById(R.id.btnGenerate);
-        tvResult = findViewById(R.id.tvResult);
+        valorMin = findViewById(R.id.valorMin);
+        valorMax = findViewById(R.id.valorMax);
+        btnGerador = findViewById(R.id.btnGerador);
+        resultado = findViewById(R.id.resultado);
         random = new Random();
-        btnGenerate.setOnClickListener(new View.OnClickListener() {
+        btnGerador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 generateRandomNumber();
@@ -35,16 +35,16 @@ public class GeradorValoresActivity extends AppCompatActivity {
 
     private void generateRandomNumber() {
         try {
-            int min = Integer.parseInt(etMinValue.getText().toString());
-            int max = Integer.parseInt(etMaxValue.getText().toString());
+            int min = Integer.parseInt(valorMin.getText().toString());
+            int max = Integer.parseInt(valorMax.getText().toString());
             if (min >= max) {
-                tvResult.setText("O valor mínimo deve ser menor que o valor máximo!");
+                resultado.setText("O valor mínimo deve ser menor que o valor máximo!");
                 return;
             }
             int randomNumber = random.nextInt((max - min) + 1) + min;
-            tvResult.setText(String.valueOf(randomNumber));
+            resultado.setText(String.valueOf(randomNumber));
         } catch (NumberFormatException e) {
-            tvResult.setText("Por favor, insira valores numéricos válidos!");
+            resultado.setText("Por favor, insira valores numéricos válidos!");
         }
     }
 }

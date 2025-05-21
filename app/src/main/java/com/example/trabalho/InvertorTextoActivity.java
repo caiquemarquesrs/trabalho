@@ -10,19 +10,19 @@ import android.widget.Toast;
 
 public class InvertorTextoActivity extends AppCompatActivity {
 
-    private EditText etInputText;
-    private Button btnInvert;
+    private EditText inputTexto;
+    private Button btnInvertor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invertortexto);
-        etInputText = findViewById(R.id.etInputText);
-        btnInvert = findViewById(R.id.btnInvert);
-        btnInvert.setOnClickListener(new View.OnClickListener() {
+        inputTexto = findViewById(R.id.inputTexto);
+        btnInvertor = findViewById(R.id.btnInvertor);
+        btnInvertor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String inputText = etInputText.getText().toString().trim();
+                String inputText = inputTexto.getText().toString().trim();
                 if (inputText.isEmpty()) {
                     Toast.makeText(InvertorTextoActivity.this, "Por favor, digite um texto!", Toast.LENGTH_SHORT).show();
                     return;

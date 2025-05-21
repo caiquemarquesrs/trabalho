@@ -22,7 +22,7 @@
             android:layout_marginEnd="10dp"/>
 
         <EditText
-            android:id="@+id/etMinValue"
+            android:id="@+id/valorMin"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -43,7 +43,7 @@
             android:layout_marginEnd="10dp"/>
 
         <EditText
-            android:id="@+id/etMaxValue"
+            android:id="@+id/valorMax"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -51,14 +51,14 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnGenerate"
+        android:id="@+id/btnGerador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Gerar"
         android:layout_marginBottom="20dp"/>
 
     <TextView
-        android:id="@+id/tvResult"
+        android:id="@+id/resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NumeroGerado"

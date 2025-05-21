@@ -16,7 +16,7 @@
         android:layout_marginBottom="20dp"/>
 
     <TextView
-        android:id="@+id/tvInvertedText"
+        android:id="@+id/invertorTexto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
@@ -24,7 +24,7 @@
         android:layout_marginBottom="40dp"/>
 
     <Button
-        android:id="@+id/btnGoToEventRegistry"
+        android:id="@+id/btnIrRegistroEvento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Registro de Eventos"/>

@@ -9,21 +9,21 @@ import android.widget.TextView;
 
 public class InvertorResultadoActivity extends AppCompatActivity {
 
-    private TextView tvInvertedText;
-    private Button btnGoToEventRegistry;
+    private TextView invertorTexto;
+    private Button btnIrRegistroEvento;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invertorresultado);
-        tvInvertedText = findViewById(R.id.tvInvertedText);
-        btnGoToEventRegistry = findViewById(R.id.btnGoToEventRegistry);
+        invertorTexto = findViewById(R.id.invertorTexto);
+        btnIrRegistroEvento = findViewById(R.id.btnIrRegistroEvento);
         String inputText = getIntent().getStringExtra("INPUT_TEXT");
         if (inputText != null && !inputText.isEmpty()) {
             String invertedText = invertText(inputText);
-            tvInvertedText.setText(invertedText);
+            invertorTexto.setText(invertedText);
         }
-        btnGoToEventRegistry.setOnClickListener(new View.OnClickListener() {
+        btnIrRegistroEvento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(InvertorResultadoActivity.this, RegistrorEventosActivity.class);

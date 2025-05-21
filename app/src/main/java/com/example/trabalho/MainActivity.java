@@ -9,14 +9,14 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnNextScreen;
+    private Button btnProximaTela;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnNextScreen = findViewById(R.id.btnNextScreen);
-        btnNextScreen.setOnClickListener(new View.OnClickListener() {
+        btnProximaTela = findViewById(R.id.btnProximaTela);
+        btnProximaTela.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SegundaActivity.class);

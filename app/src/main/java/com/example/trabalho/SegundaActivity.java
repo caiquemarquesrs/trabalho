@@ -8,32 +8,32 @@ import android.widget.Button;
 
 public class SegundaActivity extends AppCompatActivity {
 
-    private Button btnRandomGenerator;
-    private Button btnWordInverter;
-    private Button btnEventRegistry;
+    private Button btnGeradorRandomerator;
+    private Button btnTextoInvertorInverter;
+    private Button btnRegistrorEventosRegistry;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_segunda);
-        btnRandomGenerator = findViewById(R.id.btnRandomGenerator);
-        btnWordInverter = findViewById(R.id.btnWordInverter);
-        btnEventRegistry = findViewById(R.id.btnEventRegistry);
-        btnRandomGenerator.setOnClickListener(new View.OnClickListener() {
+        btnGeradorRandomerator = findViewById(R.id.btnGeradorRandomerator);
+        btnTextoInvertorInverter = findViewById(R.id.btnTextoInvertorInverter);
+        btnRegistrorEventosRegistry = findViewById(R.id.btnRegistrorEventosRegistry);
+        btnGeradorRandomerator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SegundaActivity.this, GeradorValoresActivity.class);
                 startActivity(intent);
             }
         });
-        btnWordInverter.setOnClickListener(new View.OnClickListener() {
+        btnTextoInvertorInverter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SegundaActivity.this, InvertorTextoActivity.class);
                 startActivity(intent);
             }
         });
-        btnEventRegistry.setOnClickListener(new View.OnClickListener() {
+        btnRegistrorEventosRegistry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SegundaActivity.this, RegistrorEventosActivity.class);

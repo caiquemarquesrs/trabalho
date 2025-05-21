@@ -16,7 +16,7 @@
         android:layout_marginBottom="20dp"/>
 
     <EditText
-        android:id="@+id/etInputText"
+        android:id="@+id/inputTexto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
@@ -25,7 +25,7 @@
         android:layout_marginBottom="20dp"/>
 
     <Button
-        android:id="@+id/btnInvert"
+        android:id="@+id/btnInvertor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Inverter"/>

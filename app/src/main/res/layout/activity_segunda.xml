@@ -9,21 +9,21 @@
     tools:context=".SegundaActivity">
 
     <Button
-        android:id="@+id/btnRandomGenerator"
+        android:id="@+id/btnGeradorRandomerator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Gerador de Valores"
         android:layout_marginBottom="20dp"/>
 
     <Button
-        android:id="@+id/btnWordInverter"
+        android:id="@+id/btnTextoInvertorInverter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Inversor de Texto"
         android:layout_marginBottom="20dp"/>
 
     <Button
-        android:id="@+id/btnEventRegistry"
+        android:id="@+id/btnRegistrorEventosRegistry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Registro de Eventos"/>

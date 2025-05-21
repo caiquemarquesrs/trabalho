@@ -17,28 +17,28 @@ import java.util.Locale;
 
 public class RegistrorEventosActivity extends AppCompatActivity {
 
-    private EditText etEventText;
+    private EditText eventoTexto;
     private DatePicker datePicker;
-    private Button btnRegisterEvent;
-    private ListView lvEvents;
-    private TextView tvSelectedDate;
+    private Button btnRegistrorEventos;
+    private ListView eventos;
+    private TextView dataSelecionada;
 
-    private ArrayList<String> eventsList;
-    private ArrayAdapter<String> eventsAdapter;
+    private ArrayList<String> listaEventos;
+    private ArrayAdapter<String> adpaterEventos;
     private int eventCounter = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registroreventos);
-        etEventText = findViewById(R.id.etEventText);
+        eventoTexto = findViewById(R.id.eventoTexto);
         datePicker = findViewById(R.id.datePicker);
-        btnRegisterEvent = findViewById(R.id.btnRegisterEvent);
-        lvEvents = findViewById(R.id.lvEvents);
-        tvSelectedDate = findViewById(R.id.tvSelectedDate);
-        eventsList = new ArrayList<>();
-        eventsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, eventsList);
-        lvEvents.setAdapter(eventsAdapter);
+        btnRegistrorEventos = findViewById(R.id.btnRegistrorEventos);
+        eventos = findViewById(R.id.eventos);
+        dataSelecionada = findViewById(R.id.dataSelecionada);
+        listaEventos = new ArrayList<>();
+        adpaterEventos = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, listaEventos);
+        eventos.setAdapter(adpaterEventos);
         updateDateDisplay();
         datePicker.init(datePicker.getYear(), datePicker.getMonth(), datePicker.getDayOfMonth(),
                 new DatePicker.OnDateChangedListener() {
@@ -47,7 +47,7 @@ public class RegistrorEventosActivity extends AppCompatActivity {
                         updateDateDisplay();
                     }
                 });
-        btnRegisterEvent.setOnClickListener(new View.OnClickListener() {
+        btnRegistrorEventos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 registerEvent();
@@ -60,22 +60,22 @@ public class RegistrorEventosActivity extends AppCompatActivity {
         int month = datePicker.getMonth() + 1; // Month is 0-based
         int year = datePicker.getYear();
         String formattedDate = String.format(Locale.getDefault(), "%02d/%02d/%04d", day, month, year);
-        tvSelectedDate.setText(formattedDate);
+        dataSelecionada.setText(formattedDate);
     }
 
     private void registerEvent() {
-        String eventText = etEventText.getText().toString().trim();
+        String eventText = eventoTexto.getText().toString().trim();
 
         if (eventText.isEmpty()) {
             Toast.makeText(this, "Por favor, digite um evento!", Toast.LENGTH_SHORT).show();
             return;
         }
-        String formattedDate = tvSelectedDate.getText().toString();
+        String formattedDate = dataSelecionada.getText().toString();
         String eventEntry = eventCounter + ". " + formattedDate + " - " + eventText;
-        eventsList.add(eventEntry);
-        eventsAdapter.notifyDataSetChanged();
+        listaEventos.add(eventEntry);
+        adpaterEventos.notifyDataSetChanged();
         eventCounter++;
-        etEventText.setText("");
+        eventoTexto.setText("");
 
         Toast.makeText(this, "Evento registrado com sucesso!", Toast.LENGTH_SHORT).show();
     }
